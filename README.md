@@ -1,4 +1,4 @@
-# HTTPElasticClient-Py
+# HTTPElasticClient.Py
 
 ## HTTPElasticClient è una classe Python basata sulle Elastic REST APIs, per la gestione di base (inserimento, aggiornamento, cancellazione e ricerca) dei documenti di un Server Elasticsearch
 
