@@ -29,12 +29,35 @@ nuovaPersona = {
 try:
     
     elastic.CreateDocument(nuovaPersona, nuovaPersona["id"])
-    #elastic.DeleteDocument("002")
-    #persona = elastic.GetDocumentById("003")
     persona = elastic.GetDocumentByField("cognome","Amorelli")
-
     print(json.dumps(persona, indent=4, sort_keys=True))
 
 except Exception as e:
     print(e.args)
 ```
+
+### Lista attributi disponibili
+
+- uri: str / list
+
+- index: str
+
+- auth_cred: tuple(username: string, password: string)
+
+- verify_connect: bool
+
+- response: bool
+
+### Lista metodi disponibili
+
+- HTTPElasticClient(uri: str): costruttore
+
+- HTTPElasticClient(uri: list): costruttore
+
+- CreateDocument(document, id): void
+
+- DeleteDocument(id): void
+
+- GetDocumentById(id): object / list<object>
+
+- GetDocumentByField(key, value): list<object> / list(list<object>)
