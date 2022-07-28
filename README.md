@@ -16,7 +16,7 @@ import json
 
 elastic = HTTPElasticClient("https://192.168.1.64:9200")
 elastic.verify_connect = False
-elastic.auth_cred = ("elastic", "Fabrizio123")
+elastic.auth_cred = ("username", "password")
 elastic.response = True
 elastic.index = "persone"
 
